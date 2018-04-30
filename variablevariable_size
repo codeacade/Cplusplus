@@ -1,0 +1,14 @@
+#include <iostream>
+#include <conio.h>
+
+int main(){ //sizes of types
+  std::cout << "Variable types and sizes:\n";
+  std::cout << "\n- int : " << sizeof(int);
+  std::cout << "\n- short int : " << sizeof(short int);
+  std::cout << "\n- long int ; " << sizeof(long int);
+  std::cout << "\n- char : " << sizeof(char);
+
+  std::cout << "\n- float : " << sizeof(float);
+  std::cout << "\n- double : " << sizeof(double);
+
+}
