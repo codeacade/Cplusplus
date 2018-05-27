@@ -4,34 +4,29 @@
 
 int ile, i;
 double ttime;
+float ftime;
 clock_t start, stop;
 
+
 int main(){
-  std::cout << "Enter table size: ";
-  std::cin >>  ile;  // ---- works up to 400 million :)
-  int* tablica;
-  tablica = new int [ile];
+  std::cout << "Enter array size: ";
+  std::cin >> ile;
+  int* tabs = new int [ile];
   start = clock();
-  for(i=0; i<ile; i++){
-    tablica[i] = i;
-    tablica[i] += 50;
+  for(i=0; i < ile; i++){
+    *tabs = i;
+    *tabs += 50;
+    tabs++;
   }
   stop = clock();
-  ttime = (double)(stop-start);
-  std::cout << "\n\nTime = " << ttime << "\n\n";
+  ftime = (double)(stop - start);
+  std::cout << "\nTIME = " << ftime << " - END";
+  delete [] tabs;
 
-  delete [] tablica;
-  //-------- POINTERS ---------
-  tablica = new int [ile];
-  start = clock();
-  for(i=0; i<ile; i++){
-    *tablica = i;
-    *tablica += 50;
-    tablica++;
+  int arra[ile];
+  for(i=0; i < ile; i++){
+    arra[i] = i;
+    arra[i] += 50;
   }
-  stop = clock();
-  ttime = (double)(stop-start);
-  std::cout << "\n\nTime = " << ttime << "\n\n";
 
-  delete [] tablica;
 }
