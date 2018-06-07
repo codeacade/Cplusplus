@@ -18,7 +18,7 @@ int main(){ // read a.txt file and make array of strings made of file line
   while(!ff1.eof());
   ff1.close();
 
-  do{ // reading top/bottom array keys and adjusting RWO number accordingly
+  do{ // reading top/bottom arow keys and adjusting ROW number accordingly
     key1 = getch();
     if(key1 == 224) continue;
     if(key1 == 72) row -=1;
